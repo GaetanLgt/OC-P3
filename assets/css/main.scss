@@ -1,0 +1,82 @@
+/* Importation des polices et des fichiers bootstrap. */
+@import url("/_variables.scss");
+@import url("/normalize.css");
+@import url("/_bootwatch.scss");
+@import url("/bootstrap.css");
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@1&display=swap');
+@import url('../fonts/cambria.ttc?family="Cambria Math":wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family="Aref Ruqaa Ink"+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=CaskaydiaCove+Slab:wght@300&display=swap');
+
+/* Définir le thème par défaut sur FilmsEnPleinAir. */
+$theme: "FilmsEnPleinAir" !default;
+
+/* Définition de la police par défaut du site. */
+$font-family-sans-serif: "Arapey", "Cambria Math", "Aref Ruqaa Ink", CaskaydiaCove, sans-serif;
+
+/* Définition de la famille de polices pour toutes les balises h1-h6. */
+
+
+body {
+    font-family: "Aref Ruqaa Ink" sans-serif;
+
+    #header {
+        background-image: url("../img/cinema_plein_air.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        zoom: 1.75;
+        text-shadow: rgba(#030201, 85%) 0.15em 0.15em 0.25em;
+    }
+
+    #description {
+        width: 100vw;
+        background-image: url("../img/projecteur.jpg");
+        filter: grayscale(90%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        color: #ffffff;
+        text-shadow: rgba(#030201, 85%) 0.1em 0.1em 0.2em;
+        zoom: 2;
+    }
+
+    #news {
+        background: #afafaf;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        zoom: 1.75;
+    }
+
+    #main {
+
+        & .card-image:hover {
+            transform: scale(1.1);
+
+        }
+    }
+
+    #footer {
+        background: #afafaf;
+    }
+
+    h1 {
+        font-family: "Arapey" sans-serif;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Cambria Math" sans-serif;
+    }
+
+    legend {
+        font-family: "CaskaydiaCove" sans-serif;
+    }
+}

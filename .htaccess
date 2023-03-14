@@ -1,0 +1,66 @@
+; Moteur de réécriture activé
+RéécrireBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+Règle de réécriture ^(.*)$ https://%1/$1 [R=301,L]
+
+; Dire au serveur d'afficher le contenu du fichier `404.html` lorsqu'une erreur 404 se produit.
+ErreurDocument 404 /404.html
+
+; Rediriger toutes les demandes vers la page 404.
+Redirection 301 /wp-login.php http://404.com/
+Redirection 301 /xmlrpc.php http://404.com/
+Redirection 301 /api.php http://404.com/
+Redirection 301 /lequ.php http://404.com/
+Redirection 301 /action.php http://404.com/
+Redirection 301 /log_in.php http://404.com/
+
+; Rediriger l'utilisateur vers une page personnalisée lorsqu'il rencontre une erreur 401, 403, 404 ou 500.
+ErreurDocument 401 /unauthorized.html
+ErrorDocument 403 "Une erreur s'est produite ..."
+ErreurDocument 404 /page-not-found.html
+ErrorDocument 500 http://www.example.com/server-error
+
+; RewriteEngine activé
+RewriteCond %{HTTP_HOST} ^exemple\.com [NC]
+Règle de réécriture ^(.*)$ https://www.example.com/$1 [L,R=301,NC]
+
+; Rediriger toutes les demandes vers https://www.example.com.
+RewriteEngine activé
+RewriteCond %{HTTP_HOST} ^exemple\.com [NC]
+Règle de réécriture ^(.*)$ https://www.example.com/$1 [L,R=301,NC]
+
+; Rediriger toutes les requêtes http vers https.
+var loc = fenêtre . emplacement . href + ' ' ; 
+if  ( loc . indexOf ( ' http:// ' ) == 0 ) { 
+  fenêtre . emplacement . href = loc . remplacer ( ' http:// ' , ' https:// ' ) ; 
+}
+
+; Rediriger toutes les requêtes http vers https.
+Moteur de réécriture activé
+RewriteCond %{HTTPS} !=on
+Règle de réécriture ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+; Il désactive la liste des répertoires.
+Options -Index
+
+; Blocage de toutes les requêtes de example.com.
+RewriteEngine activé
+RéécritureCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?example.com/.*$ [NC]
+Règle de réécriture \.(gif|jpg)$ - [F]
+
+; Bloquer toutes les requêtes de example.com.
+RewriteEngine activé
+RewriteCond %{HTTP_REFERER} exemple\.com [NC]
+RéécrireRègle .* - [F]
+
+; Blocage de toutes les requêtes de example.com.
+RewriteEngine activé
+RewriteCond %{HTTP_REFERER} exemple\.com [NC]
+RéécrireRègle .* - [F]
+
+; Blocage de toutes les requêtes de example.com.
+RewriteEngine activé
+RewriteCond %{HTTP_REFERER} exemple\.com [NC]
+RéécrireRègle .* - [F]
+

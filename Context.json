@@ -1,0 +1,46 @@
+{
+    " @context ": " https://schema.org/ ",
+    " @graph ": [
+        {
+            " @type ": " Organisation ",
+            " @id ": " https://gaetan-langlet.fr/#organisation ",
+            " nom ": " Les films en plein air ! pour le plaisir de toutes et tous :D ",
+            " url ": " https://gaetan-langlet.fr/ ",
+            " logo ": " https://gaetan-langlet.fr/img /logo.png ",
+            " sameAs ": [
+                " https://www.facebook.com/textfancy/ ",
+                " https://twitter.com/textfancy ",
+                " https://www.instagram.com/textfancy/ "
+            ]
+        },
+        {
+            " @type ": " WebSite ",
+            " @id ": " https://gaetan-langlet.fr/#website ",
+            " url ": " https://gaetan-langlet.fr/ ",
+            " nom ": " Les films en plein air ! pour le plaisir de toutes et tous :D ",
+            " description ": "Générateur de Les films en plein air ! pour le plaisir de toutes et tous :D en ligne gratuit ",
+            " publisher ": {
+                " @id ": " https://gaetan-langlet.fr/#organisation "
+            },
+            " inLanguage ": " fr-FR "
+        },
+        {
+            " @type ": " WebPage ",
+            " @id ": " https://gaetan-langlet.fr/#webpage ",
+            " url ": " https://gaetan-langlet.fr/ ",
+            " nom ": " Les films en plein air ! pour le plaisir de toutes et tous :D ",
+            " description ": "Générateur de Les films en plein air ! pour le plaisir de toutes et tous :D en ligne gratuit ",
+            " datePublished ": " 2019-01-01T00: 00: 00+00: 00 ",
+            " dateModified ": " 2020-01-01T00: 00: 00+00: 00 ",
+            " image ": " https://gaetan-langlet.fr/img /og.jpg "
+        },
+        {
+            " @type ": " ImageObject ",
+            " @id ": " https://gaetan-langlet.fr/#primaryimage ",
+            " url ": " https://gaetan-langlet.fr/img /og.jpg ",
+            " largeur ": 700,
+            " hauteur ": 346,
+            " légende ": "Générateur de Les films en plein air ! pour le plaisir de toutes et tous :D en ligne "
+        }
+    ]
+}
